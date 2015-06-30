@@ -1,0 +1,16 @@
+INCLUDE_OPTS = -I/home/code/MyMpp/ \
+	-I/opt/jdk1.7.0_67/include/ \
+	-I/usr/local/include/boost \
+	-I/root/thrift/include
+
+LIB_OPTS = -lthrift 
+
+SRC_FILES = JniTest.cc \
+	jni-util.cc \
+	thrift-util.cc \
+	frontend.cc
+
+CCFLAGS =  -DHAVE_NETINET_IN_H -g -O -DMPICH_IGNORE_CXX_SEEK
+ 
+default:
+	g++ ${CCFLAGS} -o filetext ${SRC_FILES} ${INCLUDE_OPTS} ${LIB_OPTS}	

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="95">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="common" displayName="common" projectFiles="true">
+      <itemPath>common/CMakeLists.txt</itemPath>
+      <itemPath>common/atomic-test.cc</itemPath>
+      <itemPath>common/atomic.h</itemPath>
+      <itemPath>common/compiler-util.h</itemPath>
+      <itemPath>common/hdfs.h</itemPath>
+      <itemPath>common/object-pool.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+    <itemPath>common/CommomMakeFile</itemPath>
+    <itemPath>Service/JniTest.cc</itemPath>
+    <itemPath>runtime/descriptors.h</itemPath>
+    <itemPath>runtime/disk-io-mgr-internal.h</itemPath>
+    <itemPath>Service/frontend.cc</itemPath>
+    <itemPath>Service/frontend.h</itemPath>
+    <itemPath>runtime/hdfs-fs-cache.cc</itemPath>
+    <itemPath>runtime/hdfs-fs-cache.h</itemPath>
+    <itemPath>hdfs-scan-node.cc</itemPath>
+    <itemPath>hdfs-text-scanner.cc</itemPath>
+    <itemPath>hdfs-text-scanner.cc.cpp</itemPath>
+    <itemPath>hdfs-text-scanner.h</itemPath>
+    <itemPath>util/hdfs-util.h</itemPath>
+    <itemPath>util/internal-queue.h</itemPath>
+    <itemPath>Service/jni-util.cc</itemPath>
+    <itemPath>Service/jni-util.h</itemPath>
+    <itemPath>util/spinlock.h</itemPath>
+    <itemPath>Service/thrift-util.cc</itemPath>
+    <itemPath>Service/thrift-util.h</itemPath>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <ccTool>
+          <incDir>
+            <pElem>../../impala/Impala-cdh5.1.0_v1.4/thirdparty/gtest-1.6.0/include</pElem>
+            <pElem>.</pElem>
+            <pElem>../../impala/Impala-cdh5.1.0_v1.4/thirdparty/glog-0.3.2/src/glog</pElem>
+            <pElem>../../impala/Impala-cdh5.1.0_v1.4/thirdparty/gflags-2.0/src/gflags</pElem>
+            <pElem>../../impala/Impala-cdh5.1.0_v1.4/thirdparty/gflags-2.0/third-party-install/include</pElem>
+            <pElem>../../impala/Impala-cdh5.1.0_v1.4/thirdparty/glog-0.3.2/src</pElem>
+            <pElem>/home/code/MyMpp</pElem>
+          </incDir>
+          <incFile>
+            <pElem>.</pElem>
+          </incFile>
+        </ccTool>
+        <linkerTool>
+          <linkerAddLib>
+            <pElem>/opt/Impala-cdh5.1.0_v1.4/thirdparty/gtest-1.6.0</pElem>
+          </linkerAddLib>
+          <linkerLibItems>
+            <linkerLibFileItem>/opt/Impala-cdh5.1.0_v1.4/thirdparty/gtest-1.6.0/libgtest.a</linkerLibFileItem>
+            <linkerLibFileItem>/opt/Impala-cdh5.1.0_v1.4/thirdparty/gtest-1.6.0/libgtest_main.a</linkerLibFileItem>
+            <linkerOptionItem>-lboost_thread</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="Service/JniTest.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Service/frontend.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Service/frontend.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Service/jni-util.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Service/jni-util.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Service/thrift-util.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Service/thrift-util.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="common/CMakeLists.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="common/CommomMakeFile" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="common/atomic-test.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="common/atomic.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="common/compiler-util.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="common/hdfs.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="common/object-pool.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="hdfs-scan-node.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="hdfs-text-scanner.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="hdfs-text-scanner.cc.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="hdfs-text-scanner.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="runtime/descriptors.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="runtime/disk-io-mgr-internal.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="runtime/hdfs-fs-cache.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="runtime/hdfs-fs-cache.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="util/hdfs-util.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="util/internal-queue.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="util/spinlock.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+      </compileType>
+      <item path="Service/JniTest.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Service/frontend.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Service/frontend.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Service/jni-util.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Service/jni-util.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Service/thrift-util.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Service/thrift-util.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="common/CMakeLists.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="common/CommomMakeFile" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="common/atomic-test.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="common/atomic.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="common/compiler-util.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="common/hdfs.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="common/object-pool.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="hdfs-scan-node.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="hdfs-text-scanner.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="hdfs-text-scanner.cc.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="hdfs-text-scanner.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="runtime/descriptors.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="runtime/disk-io-mgr-internal.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="runtime/hdfs-fs-cache.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="runtime/hdfs-fs-cache.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="util/hdfs-util.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="util/internal-queue.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="util/spinlock.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
