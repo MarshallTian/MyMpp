@@ -12,6 +12,7 @@
 #include <thrift/protocol/TBinaryProtocol.h>
 #include <sstream>
 #include <vector>
+#include <jni.h>
 #include <thrift/TApplicationException.h>
 #include <thrift/protocol/TDebugProtocol.h>
 #include <thrift/transport/TBufferTransports.h>
@@ -39,10 +40,29 @@ public:
       //return Status::OK;
     }
     
+    
+    
 private:
     boost::shared_ptr<apache::thrift::transport::TMemoryBuffer> mem_buffer_;
     boost::shared_ptr<apache::thrift::protocol::TProtocol> protocol_;
 };
+
+template<class T>
+void SerializeThriftMsg(JNIEnv* env, T* msg, jbyteArray* serialized_msg) {
+    int buffer_size = 100 * 1024;
+    ThriftSerializer serializer(false, buffer_size);
+            
+    uint8_t* buffer = NULL;
+    uint32_t size = 0;
+
+    serializer.Serialize<T>(msg, &size, &buffer);
+            
+    printf("Size: %u\n", size);
+            
+    *serialized_msg = env->NewByteArray(size);
+            
+    env->SetByteArrayRegion(*serialized_msg, 0, size, reinterpret_cast<jbyte*>(buffer));
+}
 
 }
 

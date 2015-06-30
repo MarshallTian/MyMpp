@@ -9,13 +9,13 @@ using namespace std;
 namespace MyMpp {
 Frontend::Frontend() {
     JniMethodDescriptor methods[] = {
-        {"<init>", "(ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;"
-        "Ljava/lang/String;II)V", &fe_ctor_},
-        {"createMddRequest", "([B)[B", &create_mdd_request_id_}};
+        //{"<init>", "(ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;"
+        //"Ljava/lang/String;II)V", &fe_ctor_},
+        {"createMddRequest", "([B)V", &create_mdd_request_id_}};
     
     JNIEnv* jni_env = JniUtil::getJNIEnv();
     
-    fe_class_ = jni_env->FindClass("MyMpp/HdfsMDD");
+    fe_class_ = jni_env->FindClass("MyMpp/service/JniFrontend");
     
     if (fe_class_ == NULL) {
         printf("Not find!\n");
@@ -32,7 +32,7 @@ Frontend::Frontend() {
     std::string server_name;
     
     //jboolean lazy = false;
-    fe_ = jni_env->NewObject(fe_class_, fe_ctor_, false);
+    fe_ = jni_env->AllocObject(fe_class_);
     
     if (fe_ == 0)
     {
@@ -44,6 +44,8 @@ Frontend::Frontend() {
 }
 
 void Frontend::GetMddRequest(const TRequestCtx& request_ctx) {
+    printf("request_ctx filename: %s\n", request_ctx.file_name.c_str());
     JniUtil::CallJniMethod(fe_, create_mdd_request_id_, request_ctx);
+    printf("Call over!\n");
 }
 }

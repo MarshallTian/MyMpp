@@ -15,9 +15,11 @@ public class JniUtil {
 
     public static <T extends TBase<?, ?>> void deserializeThrift(TBinaryProtocol.Factory protocolFactory,
                                                                  T result, byte[] thriftData) {
+        System.out.println("Begin to deserialize");
         TDeserializer deserializer = new TDeserializer(protocolFactory);
         try {
             deserializer.deserialize(result, thriftData);
+            System.out.println("deserialize over!");
         } catch (TException e) {
             throw new InternalException(e.getMessage());
         }
